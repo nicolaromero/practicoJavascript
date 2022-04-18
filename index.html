@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalculaBOT 🤖</title>
+    <script src="app.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Calculate All 🧮</h1>
+    </header>
+    <section id="formSquare">
+        <h2>Square 🟨</h2>
+        <form action="">
+            <label for="inputSquare">
+                How long is each side?
+            </label>
+            <input id="inputSquare"type="number">
+            <button type="button" onClick="perimeterSquare()">
+                Calculate Perimeter
+            </button>
+            <button type="button" onClick="areaSquare()">
+                Calculate Area
+            </button>
+        </form>
+        <div>
+            <p id="formSquaeResult"></p>
+        </div>
+    </section>
+    <section id="formTriangle">
+        <h2>Triangle 📐</h2>
+        <form action="">
+            <label for="inputTriangle-sideA">
+                How long the side "A"?
+            </label>
+            <input id="inputTriangle-sideB" type="number">
+            <label for="inputTriangle-sideB">
+                How long the side "B"?
+            </label>
+            <input id="inputTriangle-sideC" type="number">
+            <label for="inputTriangle-sideC">
+                How long the side "C"?
+            </label>
+            <input id="inputTriangle-sideA" type="number">
+            <button type="button" onClick="calculateTriangleArea()">
+                Calculate Area
+            </button>
+            <button type="button" onClick="calculateTrianglePerimeter()">
+                Calculate Perimeter
+            </button>
+        </form>
+        <div>
+            <p id="formTriangleResult"></p>
+        </div>
+    </section>
+    <section id="formCircle">
+        <h2>Circle ⭕️</h2>
+        <form action="">
+            <label for="inputCircle">
+                How long is each side?
+            </label>
+            <input id="inputCircle" type="number">
+            <button type="button" onClick="calculateCircleArea()">
+                Calculate Area
+            </button>
+            <button type="button" onClick="calculateCirclePerimeter()">
+                Calculate Perimeter
+            </button>
+        </form>
+    </section>
+</body>
+</html>
