@@ -26,42 +26,53 @@
             </button>
         </form>
         <div>
-            <p id="formSquaeResult"></p>
+            <p id="formSquareResult"></p>
         </div>
     </section>
     <section id="formTriangle">
         <h2>Triangle 📐</h2>
         <form action="">
-            <label for="inputTriangle-sideA">
-                How long the side "A"?
+            <label for="triangleBase">
+                How long the base?
             </label>
-            <input id="inputTriangle-sideB" type="number">
-            <label for="inputTriangle-sideB">
-                How long the side "B"?
+            <input id="triangleBase" type="number">
+            <label for="triangleHeight">
+                What is the height?
             </label>
-            <input id="inputTriangle-sideC" type="number">
-            <label for="inputTriangle-sideC">
-                How long the side "C"?
-            </label>
-            <input id="inputTriangle-sideA" type="number">
+            <input id="triangleHeight" type="number">
             <button type="button" onClick="calculateTriangleArea()">
                 Calculate Area
             </button>
+            <label for="sideA">
+                How long the side "A"?
+            </label>
+            <input id="sideA" type="number">
+            <label for="base">
+                How long the base?
+            </label>
+            <input id="base" type="number">
+            <label for="sideB">
+                How long the side "B"?
+            </label>
+            <input id="sideB" type="number">
             <button type="button" onClick="calculateTrianglePerimeter()">
                 Calculate Perimeter
             </button>
         </form>
         <div>
-            <p id="formTriangleResult"></p>
+            <p id="triangle-result"></p>
         </div>
     </section>
     <section id="formCircle">
         <h2>Circle ⭕️</h2>
         <form action="">
-            <label for="inputCircle">
-                How long is each side?
+            <label for="radius">
+                How long is the radius?
             </label>
-            <input id="inputCircle" type="number">
+            <input id="radius" type="number">
+            <button type="button" onClick="calculateCircleDiameter()">
+                Calculate Diameter
+            </button>
             <button type="button" onClick="calculateCircleArea()">
                 Calculate Area
             </button>
@@ -69,6 +80,9 @@
                 Calculate Perimeter
             </button>
         </form>
+        <div>
+            <p id="circle-result"></p>
+        </div>
     </section>
 </body>
 </html>
