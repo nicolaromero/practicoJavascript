@@ -5,84 +5,124 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CalculaBOT 🤖</title>
-    <script src="app.js"></script>
+    <script src="geometry.js"></script>
+    <script src="percentages.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <header>
+    <header id="nav-bar">
         <h1>Calculate All 🧮</h1>
+        <nav>
+            <ul>
+                <a href="#geometry"><li>Geometry</li></a>
+                <a href="#percentage"><li>Percentage</li></a>
+                <a href="#average"><li>Average</li></a>
+            </ul>
+        </nav>
     </header>
-    <section id="formSquare">
-        <h2>Square 🟨</h2>
-        <form action="">
-            <label for="inputSquare">
-                How long is each side?
-            </label>
-            <input id="inputSquare"type="number">
-            <button type="button" onClick="perimeterSquare()">
-                Calculate Perimeter
-            </button>
-            <button type="button" onClick="areaSquare()">
-                Calculate Area
-            </button>
-        </form>
-        <div>
-            <p id="formSquareResult"></p>
-        </div>
+    <section">
+        <fieldset id="geometry">
+            <legend><h2>Geometry 📐 </h2></legend>
+            <div id="formSquare">
+                <h3>Square 🟨</h3>
+                <form action="">
+                    <label for="inputSquare">
+                        How long is each side?
+                    </label>
+                    <input id="inputSquare"type="number">
+                    <button type="button" onClick="perimeterSquare()">
+                        Calculate Perimeter
+                    </button>
+                    <button type="button" onClick="areaSquare()">
+                        Calculate Area
+                    </button>
+                </form>
+                <div>
+                    <p id="formSquareResult"></p>
+                </div>
+            </div>
+            <div id="formTriangle">
+                <h3>Triangle 🔺</h3>
+                <form action="">
+                    <label for="triangleBase">
+                        How long the base?
+                    </label>
+                    <input id="triangleBase" type="number">
+                    <label for="triangleHeight">
+                        What is the height?
+                    </label>
+                    <input id="triangleHeight" type="number">
+                    <button type="button" onClick="calculateTriangleArea()">
+                        Calculate Area
+                    </button>
+                    <label for="sideA">
+                        How long the side "A"?
+                    </label>
+                    <input id="sideA" type="number">
+                    <label for="base">
+                        How long the base?
+                    </label>
+                    <input id="base" type="number">
+                    <label for="sideB">
+                        How long the side "B"?
+                    </label>
+                    <input id="sideB" type="number">
+                    <button type="button" onClick="calculateTrianglePerimeter()">
+                        Calculate Perimeter
+                    </button>
+                </form>
+                <div>
+                    <p id="triangle-result"></p>
+                </div>
+            </div>
+            <div id="formCircle">
+                <h3>Circle ⭕️</h3>
+                <form action="">
+                    <label for="radius">
+                        How long is the radius?
+                    </label>
+                    <input id="radius" type="number">
+                    <button type="button" onClick="calculateCircleDiameter()">
+                        Calculate Diameter
+                    </button>
+                    <button type="button" onClick="calculateCircleArea()">
+                        Calculate Area
+                    </button>
+                    <button type="button" onClick="calculateCirclePerimeter()">
+                        Calculate Perimeter
+                    </button>
+                </form>
+                <div>
+                    <p id="circle-result"></p>
+                </div>
+            </div>
+        </fieldset>
     </section>
-    <section id="formTriangle">
-        <h2>Triangle 📐</h2>
-        <form action="">
-            <label for="triangleBase">
-                How long the base?
-            </label>
-            <input id="triangleBase" type="number">
-            <label for="triangleHeight">
-                What is the height?
-            </label>
-            <input id="triangleHeight" type="number">
-            <button type="button" onClick="calculateTriangleArea()">
-                Calculate Area
-            </button>
-            <label for="sideA">
-                How long the side "A"?
-            </label>
-            <input id="sideA" type="number">
-            <label for="base">
-                How long the base?
-            </label>
-            <input id="base" type="number">
-            <label for="sideB">
-                How long the side "B"?
-            </label>
-            <input id="sideB" type="number">
-            <button type="button" onClick="calculateTrianglePerimeter()">
-                Calculate Perimeter
-            </button>
-        </form>
-        <div>
-            <p id="triangle-result"></p>
-        </div>
-    </section>
-    <section id="formCircle">
-        <h2>Circle ⭕️</h2>
-        <form action="">
-            <label for="radius">
-                How long is the radius?
-            </label>
-            <input id="radius" type="number">
-            <button type="button" onClick="calculateCircleDiameter()">
-                Calculate Diameter
-            </button>
-            <button type="button" onClick="calculateCircleArea()">
-                Calculate Area
-            </button>
-            <button type="button" onClick="calculateCirclePerimeter()">
-                Calculate Perimeter
-            </button>
-        </form>
-        <div>
-            <p id="circle-result"></p>
-        </div>
-    </section>
+    <section id="percentage">
+        <fieldset>
+            <legend><h2>Percentages % </h2></legend>
+            <div id="discounts">
+                <form action="">
+                    <label for="numberLess">Enter the number from which you want to subtract a percentage</label>
+                    <input id="numberLess" type="number">
+                    <label for="percentageLess">Insert the percentage to subtract</label>
+                    <input id="percentageLess" type="number">
+                    <button type="button" onClick="calculateSubtractPercentage()">Calculate</button>
+                </form>
+                <div>
+                    <p id="resultLess"></p>
+                </div>
+            </div>
+        </section>
+        </fieldset>
+        <fieldset>
+            <legend><h2>Averages 🥑 </h2></legend>
+            <section id="average">
+                <p>nsdfjkanfla</p>
+            </section>
+        </fieldset>
 </body>
 </html>

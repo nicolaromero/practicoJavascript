@@ -1,0 +1,58 @@
+/* SETTING BASE STYLES */
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'IBM Plex Mono', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    border: solid black ;
+    box-shadow: 0.5rem 0.5rem aqua;
+    margin: 20px;
+    padding: 10px;
+}
+
+/* NAV */
+
+#nav-bar {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 20px;
+    border: solid black;
+    box-shadow: 0.5rem 0.5rem aqua;
+}
+
+#nav-bar nav ul{
+    list-style: none;
+    display: flex;
+}
+
+#nav-bar nav ul a {
+    padding: 10px;
+    margin: 5px;
+    color: black;
+    border-style: solid;
+    border-color: black;
+    text-decoration: none;
+    box-shadow: 0.25rem 0.25rem aqua;
+}
+
+#nav-bar nav ul a:hover{
+    background-color: aqua;
+    transition: 0.6s;
+    box-shadow: 0.25rem 0.25rem black
+}
+
+/* SECTIONS */
+/* GEOMETRY  */
+
+#geometry {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
